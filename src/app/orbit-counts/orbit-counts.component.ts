@@ -31,4 +31,13 @@ export class OrbitCountsComponent implements OnInit {
       this.createTypesArray();
     }
   }
+
+  count(category: string): number {
+    let counter: number = 0;
+    for (let i = 0; i < this.satellites.length; i++) {
+      if (category.toLowerCase() === this.satellites[i].type.toLowerCase()){
+        counter += 1;
+      }
+    } return counter;
+  }
 }

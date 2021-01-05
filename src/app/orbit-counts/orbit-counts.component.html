@@ -1,11 +1,5 @@
 <h3 class = "header" >Satellite Counts:</h3>
-<div class="counts" *ngFor="let type of typesArray">
-    <div>{{type}}: <span *ngFor = "let satellite of satellites">{{satellite.count(type)}}</span></div>
-   <!-- <div>Total: <span>9</span></div>
-   <div >Space Debris: <span>{{satellite.count('Space Debris')}}</span></div>
-   <div>Communication: <span>2</span></div>
-   <div>Probe: <span>2</span></div>
-   <div>Positioning: <span>1</span></div>
-   <div>Space Station: <span>2</span></div>
-   <div>Telescope: <span>1</span></div> -->
+<div class="counts">
+    <div>Total: <span>{{satellites.length}}</span></div>
+    <div *ngFor="let type of typesArray">{{type}}: <span>{{count(type)}}</span></div>
 </div>

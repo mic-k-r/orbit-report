@@ -19,12 +19,5 @@ export class Satellite {
         }
         return false;
     }
-
-    count(category: string): number {
-        let counter: number = 0;
-        if (category.toLowerCase() === this.type.toLowerCase()){
-          counter += 1;
-        } return counter;
-    }
 }
 
